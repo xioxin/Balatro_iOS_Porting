@@ -113,7 +113,7 @@
 		CE73F7FF1EEB64150052DAB3 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		FA0797981BF480A200034B7C /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.1.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		FA08F69116C765A200F007B5 /* love.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = love.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA0B7F061A95AAF3000E1D17 /* love.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = love.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA0B7F061A95AAF3000E1D17 /* Balatro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Balatro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA15DFB31F9B8D9E0042AB22 /* libbz2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libbz2.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.0.sdk/usr/lib/libbz2.tbd; sourceTree = DEVELOPER_DIR; };
 		FA27B3CA1B498696008A9DCE /* theora.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = theora.framework; path = macosx/Frameworks/theora.framework; sourceTree = "<group>"; };
 		FA577A9316C7217800860150 /* liblove.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = liblove.xcodeproj; sourceTree = "<group>"; };
@@ -193,7 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				8D1107320486CEB800E47090 /* love.app */,
-				FA0B7F061A95AAF3000E1D17 /* love.app */,
+				FA0B7F061A95AAF3000E1D17 /* Balatro.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			);
 			name = "love-ios";
 			productName = "love-ios";
-			productReference = FA0B7F061A95AAF3000E1D17 /* love.app */;
+			productReference = FA0B7F061A95AAF3000E1D17 /* Balatro.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -444,6 +444,7 @@
 				CODE_SIGN_ENTITLEMENTS = love.entitlements;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,8 +465,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 11.5a;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
+				MARKETING_VERSION = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love.balatro;
 				PRODUCT_NAME = love;
 			};
 			name = Debug;
@@ -478,6 +479,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -496,8 +498,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 11.5a;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
+				MARKETING_VERSION = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love.balatro;
 				PRODUCT_NAME = love;
 			};
 			name = Release;
@@ -693,14 +695,15 @@
 					ios/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/love-ios.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Balatro;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 11.5;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
-				PRODUCT_NAME = love;
+				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love.balatro;
+				PRODUCT_NAME = Balatro;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -743,14 +746,15 @@
 					ios/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/love-ios.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Balatro;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
-				PRODUCT_NAME = love;
+				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love.balatro;
+				PRODUCT_NAME = Balatro;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -794,14 +798,15 @@
 					ios/include,
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/ios/love-ios.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Balatro;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
-				PRODUCT_NAME = love;
+				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love.balatro;
+				PRODUCT_NAME = Balatro;
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -894,6 +899,7 @@
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -912,8 +918,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 11.5a;
-				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love;
+				MARKETING_VERSION = 11.5;
+				PRODUCT_BUNDLE_IDENTIFIER = org.love2d.love.balatro;
 				PRODUCT_NAME = love;
 			};
 			name = Distribution;

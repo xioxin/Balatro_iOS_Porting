@@ -130,7 +130,26 @@ static bool deleteFileInDocuments(NSString *filename);
 static NSString *getDocumentsDirectory()
 {
 	NSArray *docdirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-	return docdirs[0];
+	NSString *documentsDirectory = docdirs[0];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    NSArray *directoryContents = [manager contentsOfDirectoryAtPath:documentsDirectory error:nil];
+    
+    NSMutableArray *visibleDirectoryContents = [NSMutableArray new];
+    for (NSString *filename in directoryContents) {
+        if (![filename hasPrefix:@"."]) {
+            [visibleDirectoryContents addObject:filename];
+        }
+    }
+
+    if ([visibleDirectoryContents count] == 0) {
+        NSString *filePath = [documentsDirectory stringByAppendingPathComponent:@"README.txt"];
+        NSString *content = @"This is the Documents directory. You can put your .love files here.";
+        NSData *fileData = [content dataUsingEncoding:NSUTF8StringEncoding];
+        [manager createFileAtPath:filePath contents:fileData attributes:nil];
+    }
+
+	return documentsDirectory;
 }
 
 static NSArray *getLovesInDocuments()
@@ -143,6 +162,10 @@ static NSArray *getLovesInDocuments()
 	NSString *path = nil;
 	while ((path = [enumerator nextObject]))
 	{
+		// Ignore hidden files and directories
+		if ([path hasPrefix:@"."])
+			continue;
+
 		//  Add .love files plus folders that contain main.lua to our list.
 		if ([path.pathExtension isEqualToString:@"love"])
 			[paths addObject:path];
@@ -327,6 +350,12 @@ std::string getLoveInResources(bool &fused)
 		// fused.
 		NSArray *filepaths = getLovesInDocuments();
 
+		if (filepaths.count == 1) {
+			// The game should be fused if we have something here.
+			fused = true;
+			return [[getDocumentsDirectory() stringByAppendingPathComponent:filepaths[0]] UTF8String];
+		}
+
 		// Let the user select a game from the un-fused list.
 		NSString *selectedfile = showGameList(filepaths);
 
@@ -343,7 +372,7 @@ std::string getLoveInResources(bool &fused)
 
 std::string getAppdataDirectory()
 {
-	NSSearchPathDirectory searchdir = NSApplicationSupportDirectory;
+	NSSearchPathDirectory searchdir = NSDocumentDirectory;
 	std::string path;
 
 	@autoreleasepool
