@@ -34,11 +34,11 @@ Balatro移植指南iOS指南
 
 下载[Love2D Unpacker](https://gist.github.com/jojonas/8a49555f479030b358ec)脚本保存到工作目录，命名为`love2d-unpacker.py`。
 
-打开 PowerShell/终端 进入工作目录，执行`python ./love2d-unpacker.py --love balatro.love Balatro.exe`
+打开 PowerShell/终端，并进入工作目录，执行`python ./love2d-unpacker.py --love balatro.love Balatro.exe`
 
 得到 `balatro.love` 文件。
 
-## 使用 AltStore 安装 Balatro.ipa
+## 使用 AltStore 安装 Balatro.ipa 到手机
 
 下载ipa文件：https://github.com/xioxin/Balatro_iOS_Porting/releases
 
