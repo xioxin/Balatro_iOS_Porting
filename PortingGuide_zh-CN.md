@@ -41,7 +41,7 @@ CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | ht
 
 在 Releases 中找到 steamodded_injector.exe 下载到工作目录。
 
-将 *Balatro.exe* 文件拖放到 steamodded_injector.exe 程序上。
+将工作目录准备的 *Balatro.exe* 文件拖放到 steamodded_injector.exe 程序上。
 
 等待它完成。
 
