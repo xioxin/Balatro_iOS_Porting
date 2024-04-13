@@ -7,25 +7,26 @@ Balatro移植指南iOS指南
 >
 > 可以转载或制作成视频教程，但需要注明出处
 
-## 软件
+## 用到的软件与文件
 
-名称 | 用途 | 下载地址 
+这里罗列了所有使用到的软件和文件，方便已经知道如何移植后快速查阅，你可以直接从下方教程开始。
+
+名称 | 描述 | 下载地址 
 :-- | :-- | :-- 
-Balatro.exe | 游戏本体 | Steam
+Balatro.exe | 游戏本体 | Steam 下载 https://store.steampowered.com/app/2379780/Balatro/
 Steamodded | 为 Balatro 添加Mod支持 | https://github.com/Steamopollys/Steamodded/releases (steamodded_injector.exe)
-LocalSend | （可选）方便从Windows发送文件到 iOS，你也可以使用其他方式发送文件 | https://localsend.org/
 Python 3.x | Python 运行环境，用于运行解包脚本 | https://www.python.org/downloads/
 love2d-unpacker.py | 游戏解包脚本 | https://gist.github.com/jojonas/8a49555f479030b358ec
+balatro.love | 解包后的游戏本体 | 使用解包工具得到
 AltStore | 用于将ipa安装到iPhone，也可以使用其他方法安装，例如巨魔或其他工具 | https://altstore.io
-Balatro.ipa | 本项目编译的ipa安装包，Love2D的运行环境 | https://github.com/xioxin/Balatro_iOS_Porting/releases
+Balatro.ipa | 本项目编译的ipa安装包，Love2D在iOS的运行环境 | https://github.com/xioxin/Balatro_iOS_Porting/releases
+LocalSend | （可选）方便从Windows发送文件到 iOS，你也可以使用其他方式发送文件 | https://localsend.org/
 IOSAdaptation.lua | MOD 让游戏适配iOS分辨率 | https://github.com/xioxin/BalatroMods/blob/main/Mods/IOSAdaptation.lua
 CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | https://discord.com/channels/1116389027176787968/1210101577550008390
 怀源黑体 | (可选) 替换字体，用于解决字体报错 | https://github.com/m13253/kaigen-gothic/blob/master/dist/CN/KaiGenGothicCN-Bold.ttf
 
 
-#### LocalSend: https://localsend.org/
-
-
+# 教程
 ## 准备游戏文件
 
 创建一个文件夹作为我们的工作目录，建议路径纯英文，防止出现bug。
@@ -66,9 +67,13 @@ CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | ht
 
 在手机上运行一次 Balatro 会显示 No Game，结束掉应用。
 
-打开系统的“文件”应用，将 `balatro.love` 复制到 我的iPhone -> Balatro 目录（必须运行一次才会显示此目录）
+在电脑和手机均安装 LocalSend https://localsend.org/
 
-重启游戏，游戏成功运行，但是画面非常模糊。
+使用 LocalSend 将 `balatro.love` 游戏文件发送到手机
+
+打开系统的“文件”应用，将 `balatro.love` 从 “我的iPhone -> LocalSend” 复制到 “我的iPhone -> Balatro”（必须运行一次才会显示此目录）
+
+运行手机上的Balatro，游戏成功运行，但是画面非常模糊，我们继续。
 
 ## 安装适配MOD
 
