@@ -37,8 +37,6 @@ CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | ht
 
 ## 安装MOD加载器（Steamodded）
 
-确保关闭游戏！
-
 前往项目：https://github.com/Steamopollys/Steamodded
 
 在 Releases 中找到 steamodded_injector.exe 下载到工作目录。
