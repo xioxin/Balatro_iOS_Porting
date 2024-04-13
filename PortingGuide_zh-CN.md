@@ -49,7 +49,7 @@ CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | ht
 
 安装Python环境：https://www.python.org/downloads/
 
-下载[Love2D Unpacker](https://gist.github.com/jojonas/8a49555f479030b358ec)脚本保存到工作目录，命名为`love2d-unpacker.py`。
+下载[love2d-unpacker.py](https://gist.github.com/jojonas/8a49555f479030b358ec)脚本保存到工作目录，命名为`love2d-unpacker.py`。
 
 打开 PowerShell/终端，并进入工作目录，执行`python ./love2d-unpacker.py --love balatro.love Balatro.exe`
 
