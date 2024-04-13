@@ -65,7 +65,7 @@ CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | ht
 
 在手机上运行一次 Balatro 会显示 No Game，结束掉应用。
 
-在电脑和手机均安装 LocalSend https://localsend.org/
+在电脑和手机均安装局域网文件共享工具LocalSend https://localsend.org/
 
 使用 LocalSend 将 `balatro.love` 游戏文件发送到手机
 
