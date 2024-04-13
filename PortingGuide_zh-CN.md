@@ -7,6 +7,24 @@ Balatro移植指南iOS指南
 >
 > 可以转载或制作成视频教程，但需要注明出处
 
+## 软件
+
+名称 | 用途 | 下载地址 
+:-- | :-- | :-- 
+Balatro.exe | 游戏本体 | Steam
+Steamodded | 为 Balatro 添加Mod支持 | https://github.com/Steamopollys/Steamodded/releases (steamodded_injector.exe)
+LocalSend | （可选）方便从Windows发送文件到 iOS，你也可以使用其他方式发送文件 | https://localsend.org/
+Python 3.x | Python 运行环境，用于运行解包脚本 | https://www.python.org/downloads/
+love2d-unpacker.py | 游戏解包脚本 | https://gist.github.com/jojonas/8a49555f479030b358ec
+AltStore | 用于将ipa安装到iPhone，也可以使用其他方法安装，例如巨魔或其他工具 | https://altstore.io
+Balatro.ipa | 本项目编译的ipa安装包，Love2D的运行环境 | https://github.com/xioxin/Balatro_iOS_Porting/releases
+IOSAdaptation.lua | MOD 让游戏适配iOS分辨率 | https://github.com/xioxin/BalatroMods/blob/main/Mods/IOSAdaptation.lua
+CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | https://discord.com/channels/1116389027176787968/1210101577550008390
+怀源黑体 | (可选) 替换字体，用于解决字体报错 | https://github.com/m13253/kaigen-gothic/blob/master/dist/CN/KaiGenGothicCN-Bold.ttf
+
+
+#### LocalSend: https://localsend.org/
+
 
 ## 准备游戏文件
 
