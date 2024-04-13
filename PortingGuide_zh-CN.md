@@ -77,7 +77,11 @@ CustomFonts.lua | (可选) 安装字体替换mod，用于解决字体报错 | ht
 
 ## 安装适配MOD
 
-将 [IOSAdaptation.lua](https://github.com/xioxin/BalatroMods/blob/main/Mods/IOSAdaptation.lua) 复制到 我的iPhone -> Balatro -> balatro -> Mods 文件夹下。
+下载 [IOSAdaptation.lua](https://github.com/xioxin/BalatroMods/blob/main/Mods/IOSAdaptation.lua)
+
+使用 LocalSend 将 `IOSAdaptation.lua` 发送到手机。
+
+打开系统的“文件”应用，将 `IOSAdaptation.lua` 从 “我的iPhone -> LocalSend” 复制到 “我的iPhone -> Balatro -> balatro -> Mods“文件夹下。
 
 重新启动游戏，画面恢复清晰。
 
@@ -131,11 +135,15 @@ end
 
 ## 可能的字体Bug
 
-如果遇到错误`TrueType Font glyph error: FT_Glyph_To_Bitmap failed (0x62)` 可以更换字体修复
+如果遇到错误`TrueType Font glyph error: FT_Glyph_To_Bitmap failed (0x62)` 可以更换字体修复。
 
-安装字体替换mod [Custom Fonts](https://discord.com/channels/1116389027176787968/1210101577550008390) (自定义游戏字体。字体文件必须命名为 `font.ttf`)。
+下载自定义字体mod [CustomFonts.lua](https://discord.com/channels/1116389027176787968/1210101577550008390) 
+下载字体：推荐 [怀源黑体](https://github.com/m13253/kaigen-gothic/blob/master/dist/CN/KaiGenGothicCN-Bold.ttf) 重命名为 `font.ttf`
 
-推荐字体：[怀源黑体](https://github.com/m13253/kaigen-gothic/blob/master/dist/CN/KaiGenGothicCN-Bold.ttf) 重命名为 `font.ttf` 与 `CustomFonts.lua` 一起存入Mods 目录。
+使用 LocalSend 将 `font.ttf` 和 `CustomFonts.lua` 发送到手机。
+
+打开系统的“文件”应用，将 `font.ttf` 和 `CustomFonts.lua` 从 “我的iPhone -> LocalSend” 复制到 “我的iPhone -> Balatro -> balatro -> Mods“文件夹下。
+
 
 #### CustomFonts.lua
 ```lua
